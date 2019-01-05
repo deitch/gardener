@@ -69,9 +69,10 @@ spec:<% caBundle=value("spec.caBundle", "") %>
         % if kubernetesVersions != []:
         ${yaml.dump(kubernetesVersions, width=10000)}
         % else:
-        - 1.12.3
-        - 1.11.5
-        - 1.10.11
+        - 1.13.1
+        - 1.12.4
+        - 1.11.6
+        - 1.10.12
       # - 1.9.11 # Usage is not recommended, see CVE-2018-1002105
         % endif
       machineImages:<% machineImages=value("spec.aws.constraints.machineImages", []) %>
@@ -81,9 +82,9 @@ spec:<% caBundle=value("spec.caBundle", "") %>
       - name: CoreOS
         regions:
         - name: eu-west-1
-          ami: ami-1ed8d467
+          ami: ami-030d1bab626c90e46
         - name: us-east-1
-          ami: ami-f6ecac89
+          ami: ami-0b1db01d775d666c2
       % endif
       machineTypes:<% machineTypes=value("spec.aws.constraints.machineTypes", []) %>
       % if machineTypes != []:
@@ -174,9 +175,10 @@ spec:<% caBundle=value("spec.caBundle", "") %>
         % if kubernetesVersions != []:
         ${yaml.dump(kubernetesVersions, width=10000)}
         % else:
-        - 1.12.3
-        - 1.11.5
-        - 1.10.11
+        - 1.13.1
+        - 1.12.4
+        - 1.11.6
+        - 1.10.12
       # - 1.9.11 # Usage is not recommended, see CVE-2018-1002105
         % endif
       machineImages:<% machineImages=value("spec.azure.constraints.machineImages", []) %>
@@ -187,7 +189,7 @@ spec:<% caBundle=value("spec.caBundle", "") %>
         publisher: CoreOS
         offer: CoreOS
         sku: Stable
-        version: 1745.7.0
+        version: 1911.5.0
       % endif
       machineTypes:<% machineTypes=value("spec.azure.constraints.machineTypes", []) %>
         % if machineTypes != []:
@@ -275,9 +277,10 @@ spec:<% caBundle=value("spec.caBundle", "") %>
         % if kubernetesVersions != []:
         ${yaml.dump(kubernetesVersions, width=10000)}
         % else:
-        - 1.12.3
-        - 1.11.5
-        - 1.10.11
+        - 1.13.1
+        - 1.12.4
+        - 1.11.6
+        - 1.10.12
       # - 1.9.11 # Usage is not recommended, see CVE-2018-1002105
         % endif
       machineImages:<% machineImages=value("spec.gcp.constraints.machineImages", []) %>
@@ -285,7 +288,7 @@ spec:<% caBundle=value("spec.caBundle", "") %>
       ${yaml.dump(machineImages, width=10000)}
       % else:
       - name: CoreOS
-        image: projects/coreos-cloud/global/images/coreos-stable-1745-7-0-v20180614
+        image: projects/coreos-cloud/global/images/coreos-stable-1911-5-0-v20181219
       % endif
       machineTypes:<% machineTypes=value("spec.gcp.constraints.machineTypes", []) %>
       % if machineTypes != []:
@@ -364,9 +367,10 @@ spec:<% caBundle=value("spec.caBundle", "") %>
         ${yaml.dump(kubernetesVersions, width=10000)}
         % else:
         versions:
-        - 1.12.3
-        - 1.11.5
-        - 1.10.11
+        - 1.13.1
+        - 1.12.4
+        - 1.11.6
+        - 1.10.12
       # - 1.9.11 # Usage is not recommended, see CVE-2018-1002105
         % endif
       machineImages:<% machineImages=value("spec.alicloud.constraints.machineImages", []) %>
@@ -374,7 +378,7 @@ spec:<% caBundle=value("spec.caBundle", "") %>
       ${yaml.dump(machineImages, width=10000)}
       % else:
       - name: CoreOS
-        id: coreos_1745_7_0_64_30G_alibase_20180705.vhd
+        id: coreos_1911_5_0_64_30G_alibase_20181219.vhd
       % endif
       machineTypes:<% machineTypes=value("spec.alicloud.constraints.machineTypes", []) %>
       % if machineTypes != []:
@@ -454,9 +458,10 @@ spec:<% caBundle=value("spec.caBundle", "") %>
         % if kubernetesVersions != []:
         ${yaml.dump(kubernetesVersions, width=10000)}
         % else:
-        - 1.12.3
-        - 1.11.5
-        - 1.10.11
+        - 1.13.1
+        - 1.12.4
+        - 1.11.6
+        - 1.10.12
       # - 1.9.11 # Usage is not recommended, see CVE-2018-1002105
         % endif
       loadBalancerProviders:<% loadBalancerProviders=value("spec.openstack.constraints.loadBalancerProviders", []) %>
@@ -470,7 +475,7 @@ spec:<% caBundle=value("spec.caBundle", "") %>
       ${yaml.dump(machineImages, width=10000)}
       % else:
       - name: CoreOS
-        image: coreos-1745.7.0
+        image: coreos-1911.5.0
       % endif
       machineTypes:<% machineTypes=value("spec.openstack.constraints.machineTypes", []) %>
       % if machineTypes != []:

@@ -17,15 +17,16 @@ spec:
       - name: MY-FLOATING-POOL
       kubernetes:
         versions:
-        - 1.12.3
-        - 1.11.5
-        - 1.10.11
+        - 1.13.1
+        - 1.12.4
+        - 1.11.6
+        - 1.10.12
       # - 1.9.11 # Usage is not recommended, see CVE-2018-1002105
       loadBalancerProviders:
       - name: haproxy
       machineImages:
       - name: CoreOS
-        image: coreos-1745.7.0
+        image: coreos-1911.5.0
       machineTypes:
       - name: medium_2_4
         cpu: "2"
